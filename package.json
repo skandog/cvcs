@@ -22,7 +22,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint src",
-    "cypress": "cypress open --config-file=cypress.config.ts"
+    "cypress": "cypress open"
   },
   "eslintConfig": {
     "extends": [
