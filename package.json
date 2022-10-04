@@ -38,7 +38,12 @@
       "cypress/globals": true
     },
     "rules": {
-      "prettier/prettier": "warn"
+      "prettier/prettier": [
+        "error",
+        {
+          "endOfLine": "auto"
+        }
+      ]
     }
   },
   "prettier": {
