@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es6",
     "lib": [
       "dom",
       "dom.iterable",
@@ -16,13 +16,15 @@
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": true,
+    "isolatedModules": false,
     "noEmit": true,
     "types": ["jest", "node"],
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "outDir": "./built"
   },
   "include": [
     "src",
     "cypress"
-  ]
+  ],
+  "exclude": ["node_modules"]
 }
