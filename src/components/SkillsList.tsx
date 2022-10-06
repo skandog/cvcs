@@ -1,7 +1,7 @@
 const SkillsList = () => {
   return (
     <div>
-      <h1>skills list</h1>
+      <h2>skills list</h2>
     </div>
   );
 };
