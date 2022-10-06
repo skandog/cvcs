@@ -21,7 +21,7 @@ const SkillsList = ({loadSkills, skills}: Props) => {
   return (
     <div>
       <ul>
-        {skills.map(skill => (
+        {skills?.map(skill => (
           <li key={skill.id}>{skill.name}</li>
         ))}
       </ul>
