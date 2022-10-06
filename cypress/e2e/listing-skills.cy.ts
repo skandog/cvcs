@@ -4,8 +4,8 @@ describe('Listing skills', () => {
     const typeSkill = 'Typescript';
 
     cy.intercept('GET', 'http://localhost:3001/skills', [
-      {name: 'Trail Blazer', type: 'Soft Skills'},
-      {name: 'Typescript', type: 'dev'},
+      {name: 'Trail Blazer', count: 2, type: 'Soft Skills'},
+      {name: 'Typescript', count: 3, type: 'dev'},
     ]);
 
     cy.visit('/');
