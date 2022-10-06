@@ -1,19 +1,30 @@
 import {useEffect} from 'react';
 
 export interface Skill {
+  id: number;
   name: string;
   count: number;
   type?: string;
 }
 
-const SkillsList = ({loadSkills}: {loadSkills: () => void}) => {
+export interface Props {
+  loadSkills: () => void;
+  skills?: Skill[];
+  [key: string]: any;
+}
+
+const SkillsList = ({loadSkills, skills}: Props) => {
   useEffect(() => {
     loadSkills();
   }, [loadSkills]);
 
   return (
     <div>
-      <h2>skills list</h2>
+      <ul>
+        {skills.map(skill => (
+          <li key={skill.id}>{skill.name}</li>
+        ))}
+      </ul>
     </div>
   );
 };
