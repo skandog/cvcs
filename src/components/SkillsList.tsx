@@ -1,6 +1,12 @@
 import {useEffect} from 'react';
 
-const SkillsList = ({loadSkills}) => {
+export interface Skill {
+  name: string;
+  count: number;
+  type?: string;
+}
+
+const SkillsList = ({loadSkills}: {loadSkills: () => void}) => {
   useEffect(() => {
     loadSkills();
   }, [loadSkills]);
