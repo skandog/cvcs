@@ -1,3 +1,3 @@
 import {createContext} from 'react';
 
-export const skillsContext = createContext(undefined);
+export const skillsContext = createContext([]);
