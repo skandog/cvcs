@@ -40,14 +40,13 @@ describe('<SkillsList />', () => {
     const skills = [
       {id: 1, name: 'Trail Blazer', count: 2, type: 'Soft Skills'},
     ];
-    beforeEach(() => {
+
+    it('renders skills when context is explicitly called in jest', () => {
       render(
-        <skillsContext.Provider value={skills}>
+        <skillsContext.Provider value={{skills}}>
           <SkillsScreen />
         </skillsContext.Provider>,
       );
-    });
-    it('testing contwext in jest', () => {
       expect(screen.getByText('Trail Blazer')).toBeInTheDocument();
     });
   });
