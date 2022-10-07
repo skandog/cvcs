@@ -8,8 +8,6 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <skillsContext.Provider value={(Skills, setSkills)}>
-      <App />
-    </skillsContext.Provider>
+    <App />
   </React.StrictMode>,
 );

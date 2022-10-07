@@ -1,11 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 import SkillsScreen from './components/SkillsScreen';
+import {skillsContext} from './contexts/contexts';
+import {dummySkillList} from './lib/skills';
 
 function App() {
+  const [skills, setSkills] = useState(dummySkillList);
+
   return (
-    <div className="App">
-      <SkillsScreen />
-    </div>
+    <skillsContext.Provider value={(skills, setSkills)}>
+      <div className="App">
+        <SkillsScreen />
+      </div>
+    </skillsContext.Provider>
   );
 }
 
