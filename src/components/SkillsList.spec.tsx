@@ -1,6 +1,6 @@
 import {render, screen} from '@testing-library/react';
 import SkillsList from './SkillsList';
-import {Skill} from './SkillsList';
+import {Skill} from '../lib/skills';
 
 describe('SkillsList', () => {
   const skills: Skill[] = [

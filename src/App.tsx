@@ -7,7 +7,7 @@ function App() {
   const [skills, setSkills] = useState(dummySkillList);
 
   return (
-    <skillsContext.Provider value={{skills, setSkills}}>
+    <skillsContext.Provider value={{skills}}>
       <div className="App">
         <SkillsScreen />
       </div>

@@ -1,11 +1,5 @@
 import {useEffect} from 'react';
-
-export interface Skill {
-  id: number;
-  name: string;
-  count: number;
-  type?: string;
-}
+import {Skill} from '../lib/skills';
 
 export interface Props {
   loadSkills: () => void;
