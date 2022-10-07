@@ -19,7 +19,7 @@ const SkillsList = ({loadSkills, skills}: Props) => {
   }, [loadSkills]);
 
   return (
-    <div>
+    <div className="skills-list">
       <ul>
         {skills?.map(skill => (
           <li key={skill.id}>{skill.name}</li>
