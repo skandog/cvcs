@@ -2,9 +2,10 @@ import React, {useEffect, useState} from 'react';
 import SkillsScreen from './components/SkillsScreen';
 import {skillsContext} from './contexts/contexts';
 import {dummySkillList} from './lib/skills';
+import {Skill} from './lib/skills';
 
 function App() {
-  const [skills, setSkills] = useState(dummySkillList);
+  const [skills, setSkills] = useState<Skill[] | null>(dummySkillList);
 
   useEffect(() => {
     const fetchSkills = async () => {
@@ -14,7 +15,7 @@ function App() {
     };
     fetchSkills();
   }, []);
-  console.log(skills);
+
   return (
     <skillsContext.Provider value={{skills}}>
       <div className="App">
