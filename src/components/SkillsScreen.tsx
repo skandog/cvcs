@@ -7,7 +7,7 @@ export default function SkillsScreen() {
 
   return (
     <div>
-      <h1>skills</h1>
+      <h1>Skills</h1>
       <SkillsList loadSkills={() => {}} skills={skills} />
     </div>
   );
