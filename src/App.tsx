@@ -1,25 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useEffect, useState} from 'react';
+import SkillsScreen from './components/SkillsScreen';
+import {skillsContext} from './contexts/contexts';
+import {dummySkillList} from './lib/skills';
+import {Skill} from './lib/skills';
 
 function App() {
+  const [skills, setSkills] = useState<Skill[] | null>(dummySkillList);
+
+  useEffect(() => {
+    const fetchSkills = async () => {
+      let response = await fetch('http://localhost:3001/skills');
+      let data = await response.json();
+      setSkills([...data]);
+    };
+    fetchSkills();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <skillsContext.Provider value={{skills}}>
+      <div className="App">
+        <SkillsScreen />
+      </div>
+    </skillsContext.Provider>
   );
 }
 
