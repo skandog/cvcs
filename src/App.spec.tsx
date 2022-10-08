@@ -1,11 +1,11 @@
-import react from 'react';
-import nock from 'nock';
+// import react from 'react';
+// import nock from 'nock';
 import '@testing-library/jest-dom/extend-expect';
-import fetchSkills from './App';
-import {render} from '@testing-library/react';
-import App from './App';
+// import fetchSkills from './App';
+// import {render} from '@testing-library/react';
+// import App from './App';
 
-const BASE_URL = 'http://localhost:3001/';
+// const BASE_URL = 'http://localhost:3001/';
 
 describe('<App />', () => {
   describe('fetchSkills', () => {
