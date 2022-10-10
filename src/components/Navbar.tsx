@@ -9,9 +9,11 @@ import {
   MenuIcon,
   MenuItem,
   MenuButton,
+  IconButton,
 } from '@chakra-ui/react';
+import {HamburgerIcon} from '@chakra-ui/icons';
 
-const Navbar = (props: any) => {
+const Navbar = () => {
   return (
     <Box position={'static'} as="nav" w="100%">
       <Container
@@ -39,8 +41,17 @@ const Navbar = (props: any) => {
         >
           <Link>Skills</Link> <Link>Stories</Link>
         </Stack>
-        <Box flex={1} display={{align: 'right'}}>
-          <Heading>Hi</Heading>
+        <Box flex={1}>
+          <Box ml={2} display={{base: 'inline-block', md: 'none'}}>
+            <Menu isLazy id="nav-menu">
+              <MenuButton
+                as={IconButton}
+                icon={<HamburgerIcon />}
+                variant="outline"
+                aria-label="Options"
+              />
+            </Menu>
+          </Box>
         </Box>
       </Container>
     </Box>
