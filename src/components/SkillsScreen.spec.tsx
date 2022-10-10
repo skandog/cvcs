@@ -1,5 +1,4 @@
 import {render, screen} from '@testing-library/react';
-import {ReactElement} from 'react';
 import {skillsContext} from '../contexts/contexts';
 import SkillsScreen from './SkillsScreen';
 import App from '../App';
@@ -15,24 +14,7 @@ describe('<SkillsList />', () => {
       expect(screen.queryByText('Trail Blazer')).not.toBeInTheDocument();
     });
 
-    const customRender = (
-      ui: ReactElement,
-      {providerProps, ...renderOptions},
-    ) => {
-      return render(
-        <skillsContext.Provider value={providerProps}>
-          {ui}
-        </skillsContext.Provider>,
-        renderOptions,
-      );
-    };
-
     it('skillsContext provides skill values to component', () => {
-      //     value: [{id: 1, name: 'Trail Blazer', count: 2, type: 'Soft Skills'}],
-      //   };
-
-      //   customRender(<SkillsScreen />, {providerProps});
-
       render(<App />);
       expect(screen.getByText('Trail Blazer')).toBeInTheDocument();
     });

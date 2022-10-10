@@ -9,7 +9,7 @@ function App() {
 
   useEffect(() => {
     const fetchSkills = async () => {
-      let response = await fetch('http://localhost:3001/skills');
+      let response = await fetch('https://cvcs.herokuapp.com/skills');
       let data = await response.json();
       setSkills([...data]);
     };
