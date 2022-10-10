@@ -19,7 +19,9 @@ function App() {
   return (
     <skillsContext.Provider value={{skills}}>
       <div className="App">
-        <SkillsScreen />
+        <Layout>
+          <SkillsScreen />
+        </Layout>
       </div>
     </skillsContext.Provider>
   );
