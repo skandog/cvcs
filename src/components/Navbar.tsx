@@ -1,4 +1,4 @@
-import {Box, Container, Heading} from '@chakra-ui/react';
+import {Box, Container, Flex, Heading} from '@chakra-ui/react';
 
 const Navbar = (props): any => {
   return (
@@ -11,7 +11,13 @@ const Navbar = (props): any => {
         // wrap="wrap"
         // align="center"
         // justify="space-between"
-      ></Container>
+      >
+        <Flex align="center" mr={5}>
+          <Heading as="h1" size="lg">
+            CV Cheat Sheet
+          </Heading>
+        </Flex>
+      </Container>
     </Box>
   );
 };

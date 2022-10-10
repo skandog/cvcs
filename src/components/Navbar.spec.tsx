@@ -1,4 +1,4 @@
-import {render} from '@testing-library/react';
+import {render, screen} from '@testing-library/react';
 import Navbar from './Navbar';
 
 describe('Navbar', () => {
@@ -9,7 +9,17 @@ describe('Navbar', () => {
   it('displays title', () => {
     const Title = 'CV Cheat Sheet';
     render(<Navbar />);
+    let navi = screen.getByRole('navigation');
+    expect(navi).toHaveTextContent(Title);
+  });
 
-    expect(Title).toBeInTheDocument();
+  it('displays page links', () => {
+    const skills = 'skills';
+    const stories = 'stories';
+
+    render(<Navbar />);
+    let navi = screen.getByRole('navigation');
+    expect(navi).toHaveTextContent(skills);
+    expect(navi).toHaveTextContent(stories);
   });
 });
