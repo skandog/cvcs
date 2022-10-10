@@ -6,7 +6,7 @@ import {
   Link,
   Stack,
   Menu,
-  MenuIcon,
+  MenuList,
   MenuItem,
   MenuButton,
   IconButton,
@@ -50,6 +50,10 @@ const Navbar = () => {
                 variant="outline"
                 aria-label="Options"
               />
+              <MenuList>
+                <MenuItem>Skills</MenuItem>
+                <MenuItem>Stories</MenuItem>
+              </MenuList>
             </Menu>
           </Box>
         </Box>
