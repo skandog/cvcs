@@ -1,8 +1,19 @@
-import {Box, Container, Flex, Heading} from '@chakra-ui/react';
+import {
+  Box,
+  Container,
+  Flex,
+  Heading,
+  Link,
+  Stack,
+  Menu,
+  MenuIcon,
+  MenuItem,
+  MenuButton,
+} from '@chakra-ui/react';
 
-const Navbar = (props): any => {
+const Navbar = (props: any) => {
   return (
-    <Box position={'static'} as="nav" w="100%" {...props}>
+    <Box position={'static'} as="nav" w="100%">
       <Container
         display={'flex'}
         p={3}
@@ -17,6 +28,20 @@ const Navbar = (props): any => {
             CV Cheat Sheet
           </Heading>
         </Flex>
+
+        <Stack
+          direction={{base: 'column', md: 'row'}}
+          display={{base: 'none', md: 'flex'}}
+          width={{base: 'full', md: 'auto'}}
+          align="center"
+          flexGrow={1}
+          mt={{base: 4, md: 0}}
+        >
+          <Link>Skills</Link> <Link>Stories</Link>
+        </Stack>
+        <Box flex={1} display={{align: 'right'}}>
+          <Heading>Hi</Heading>
+        </Box>
       </Container>
     </Box>
   );

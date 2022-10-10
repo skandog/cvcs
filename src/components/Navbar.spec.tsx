@@ -14,12 +14,12 @@ describe('Navbar', () => {
   });
 
   it('displays page links', () => {
-    const skills = 'skills';
-    const stories = 'stories';
+    const skills = 'Skills';
+    const stories = 'Stories';
 
     render(<Navbar />);
     let navi = screen.getByRole('navigation');
-    expect(navi).toHaveTextContent(skills);
+    expect(navi).toHave(skills);
     expect(navi).toHaveTextContent(stories);
   });
 });
