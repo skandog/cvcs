@@ -21,6 +21,8 @@ const Navbar = (props: any) => {
         p={3}
         maxW="container.lg"
         color={'white'}
+        bg="#0c661b"
+        css={{backdropFilter: 'blur(100px)'}}
         // @ts-ignore
         wrap="wrap"
         // @ts-ignore
