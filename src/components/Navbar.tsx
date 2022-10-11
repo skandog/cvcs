@@ -13,7 +13,7 @@ import {
 } from '@chakra-ui/react';
 import {HamburgerIcon} from '@chakra-ui/icons';
 
-const Navbar = () => {
+const Navbar = (props: any) => {
   return (
     <Box position={'static'} as="nav" w="100%">
       <Container
@@ -21,16 +21,17 @@ const Navbar = () => {
         p={3}
         maxW="container.lg"
         color={'white'}
-        // wrap="wrap"
-        // align="center"
-        // justify="space-between"
+        // @ts-ignore
+        wrap="wrap"
+        // @ts-ignore
+        align="center"
+        justify="space-between"
       >
         <Flex align="center" mr={5}>
           <Heading as="h1" size="lg">
             CV Cheat Sheet
           </Heading>
         </Flex>
-
         <Stack
           direction={{base: 'column', md: 'row'}}
           display={{base: 'none', md: 'flex'}}
@@ -41,7 +42,12 @@ const Navbar = () => {
         >
           <Link>Skills</Link> <Link>Stories</Link>
         </Stack>
-        <Box flex={1}>
+
+        <Box
+          flex={1}
+          // @ts-ignore
+          align="right"
+        >
           <Box ml={2} display={{base: 'inline-block', md: 'none'}}>
             <Menu isLazy id="nav-menu">
               <MenuButton
