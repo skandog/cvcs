@@ -12,14 +12,4 @@ describe('Navbar', () => {
     let navi = screen.getByRole('navigation');
     expect(navi).toHaveTextContent(Title);
   });
-
-  it('displays page links', () => {
-    const skills = 'Skills';
-    const stories = 'Stories';
-
-    render(<Navbar />);
-    let navi = screen.getByRole('navigation');
-    expect(navi).toHave(skills);
-    expect(navi).toHaveTextContent(stories);
-  });
 });

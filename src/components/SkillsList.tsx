@@ -34,10 +34,10 @@ const SkillsList = ({loadSkills, skills}: Props) => {
             </Tr>
           </Thead>
           <Tbody>
-            {skills.map(skill => {
+            {skills?.map((skill, index) => {
               return (
                 <Tr>
-                  <Td>{skill.name}</Td>
+                  <Td key={index}>{skill.name}</Td>
                 </Tr>
               );
             })}
