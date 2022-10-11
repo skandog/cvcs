@@ -1,5 +1,16 @@
 import {useEffect} from 'react';
 import {Skill} from '../lib/skills';
+import {
+  Table,
+  Thead,
+  Tbody,
+  Tfoot,
+  Tr,
+  Th,
+  Td,
+  TableCaption,
+  TableContainer,
+} from '@chakra-ui/react';
 
 export interface Props {
   loadSkills: () => void;
@@ -14,11 +25,25 @@ const SkillsList = ({loadSkills, skills}: Props) => {
 
   return (
     <div className="skills-list">
-      <ul>
-        {skills?.map(skill => (
-          <li key={skill.id}>{skill.name}</li>
-        ))}
-      </ul>
+      <TableContainer>
+        <Table variant="simple">
+          <Thead>
+            <Tr>
+              <Th>Name</Th>
+              <Th>Area</Th>
+            </Tr>
+          </Thead>
+          <Tbody>
+            {skills.map(skill => {
+              return (
+                <Tr>
+                  <Td>{skill.name}</Td>
+                </Tr>
+              );
+            })}
+          </Tbody>
+        </Table>
+      </TableContainer>
     </div>
   );
 };

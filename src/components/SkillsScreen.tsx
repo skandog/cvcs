@@ -9,10 +9,8 @@ export default function SkillsScreen() {
 
   return (
     <div>
-      <Card>
-        <Heading>Skills</Heading>
-        <SkillsList loadSkills={() => {}} skills={skills} />
-      </Card>
+      <Heading>Skills</Heading>
+      <SkillsList loadSkills={() => {}} skills={skills} />
     </div>
   );
 }
