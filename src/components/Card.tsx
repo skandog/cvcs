@@ -1,14 +1,5 @@
 import React from 'react';
-import {
-  Box,
-  Flex,
-  AspectRatio,
-  Image,
-  Text,
-  Link,
-  Button,
-  Stack,
-} from '@chakra-ui/react';
+import {Box, Stack} from '@chakra-ui/react';
 
 function Card(props) {
   const {children} = props;

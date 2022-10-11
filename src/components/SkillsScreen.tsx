@@ -1,7 +1,6 @@
 import {useContext} from 'react';
 import {skillsContext} from '../contexts/contexts';
 import SkillsList from './SkillsList';
-import Card from './Card';
 import {Heading} from '@chakra-ui/react';
 
 export default function SkillsScreen() {
