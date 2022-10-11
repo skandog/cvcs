@@ -3,6 +3,7 @@ import SkillsScreen from './components/SkillsScreen';
 import {skillsContext} from './contexts/contexts';
 import {dummySkillList} from './lib/skills';
 import {Skill} from './lib/skills';
+import Layout from './components/Layouts/Main';
 
 function App() {
   const [skills, setSkills] = useState<Skill[] | null>(dummySkillList);
@@ -19,7 +20,9 @@ function App() {
   return (
     <skillsContext.Provider value={{skills}}>
       <div className="App">
-        <SkillsScreen />
+        <Layout>
+          <SkillsScreen />
+        </Layout>
       </div>
     </skillsContext.Provider>
   );
